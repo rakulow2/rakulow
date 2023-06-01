@@ -1,0 +1,440 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+
+    <title>영화 찾기</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap');
+
+        * {
+            font-family: 'Gowun Dodum', sans-serif;
+        }
+
+        .mytitle {
+            background-color: green;
+            color: white;
+
+            height: 250px;
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+
+            background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://movie-phinf.pstatic.net/20210715_95/1626338192428gTnJl_JPEG/movie_image.jpg');
+            background-position: center;
+            background-size: cover;
+        }
+
+        .mytitle>button {
+            width: 250px;
+            height: 50px;
+
+            background-color: transparent;
+
+            border: 1px solid white;
+            color: white;
+
+            border-radius: 50px;
+
+            margin-top: 20px;
+        }
+
+        .mytitle>button:hover {
+            border: 2px solid white;
+        }
+
+        .mybtn {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+
+            margin-top: 20px;
+        }
+
+        .mybtn>button {
+            margin-right: 10px;
+        }
+
+        .search {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            padding: 20px 0;
+            border-bottom: 1px solid black;
+        }
+
+        .movie-card {
+            box-shadow: 0 3px 6px rgba(0, 0, 0, 0.12), 0 3px 6px rgba(0, 0, 0, 0.24);
+            margin: 20px;
+            padding: 20px;
+            width: 300px;
+            justify-self: center;
+            background-color: bisque;
+            border-radius: 10px;
+            cursor: pointer;
+            user-select: none;
+        }
+
+        .card-list {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            justify-content: center;
+        }
+
+        .p {
+            width: 250px
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="mytitle">
+        <h1>영화 콜렉션</h1>
+    </div>
+    <form class="search" onsubmit="handleSearch(event)">
+        <label>영화 찾기 : </label>
+        <input type="text" id="search-input" placeholder="search">
+        <button type="submit" id="search-btn">검색</button>
+    </form>
+    <section class="card-list">
+        <div class="movie-card">
+            <img class="p" src="https://t1.daumcdn.net/movie/b05fec37909f3c46d8ada73ba1d2bc2f8868e869" onclick="func()">
+            <h3 class="movie-title">범죄도시3</h3>
+            <p>베트남 납치 살해범 검거 후 7년 뒤,
+                ‘마석도’(마동석)는 새로운 팀원들과 함께 살인사건을 조사한다.
+                사건 조사 중, ‘마석도’는 신종 마약 사건이 연루되었음을 알게 되고 수사를 확대한다.
+                한편, 마약 사건의 배후인 '주성철'(이준혁)은 계속해서 판을 키워가고
+                약을 유통하던 일본 조직과 '리키'(아오키 무네타카)까지 한국에 들어오며
+                사건의 규모는 점점 더 커져가는데...</p>
+            <p>평점 : 7.1</p>
+            <script type="text/javascript">
+                function func() {
+                    alert('영화id:1');
+                }
+                </script>
+        </div>
+        <div class="movie-card">
+            <img class="p" src="http://img.cgv.co.kr/Movie/Thumbnail/Poster/000086/86883/86883_1000.jpg" onclick="func1()">
+            <h3 class="movie-title">가디언즈 오브 갤럭시:Volume 3</h3>
+            <p>‘가모라’를 잃고 슬픔에 빠져 있던 ‘피터 퀼’이 위기에 처한 은하계와 동료를 지키기 위해 다시 한번 가디언즈 팀과 힘을 모으고, 성공하지 못할 경우 그들의 마지막이 될지도 모르는 미션에
+                나서는 이야기</p>
+            <p>평점 : 8.8</p>
+            <script type="text/javascript">
+                function func1() {
+                    alert('영화id:2');
+                }
+                </script>
+        </div>
+        <div class="movie-card">
+            <img class="p" src="https://t1.daumcdn.net/movie/1dd23ff0117caadf6e2fc7db6184eec157e8d8f5" onclick="func2()">
+            <h3 class="movie-title">극장판 포켓몬스터DP : 아르세우스 초극의 시공으로</h3>
+            <p>미케나 마을에 도착한 지우와 피카츄.
+                갑자기 등장한 디아루가와 펄기아, 기라티나의 싸움으로
+                수천 년 전, 인간에게 배신당해 잠들었던 아르세우스가
+                분노와 함께 깨어난다!
+                복수를 위해 아르세우스는 미케나 마을을 공격하고,
+                신전의 수호자 시나는 이를 막아보려 하지만
+                그의 강대한 분노 앞에 마을은 돌이킬 수 없는 위험에 빠진다. </p>
+            <p>평점 : 8.6</p>
+            <script type="text/javascript">
+                function func2() {
+                    alert('영화id:3');
+                }
+                </script>
+        </div>
+        <div class="movie-card">
+            <img class="p" src="https://img.cgv.co.kr/Movie/Thumbnail/Poster/000086/86849/86849_150.jpg" onclick="func3()">
+            <h3 class="movie-title">인어 공주</h3>
+            <p>아틀란티카 바다의 왕 ‘트라이튼’의 사랑스러운 막내딸인 인어 ‘에리얼’은
+                늘 인간들이 사는 바다 너머 세상으로의 모험을 꿈꾼다.
+                어느 날, 우연히 바다 위로 올라갔다가
+                폭풍우 속 가라앉는 배에 탄 인간 ‘에릭 왕자’의 목숨을 구해준다.
+                갈망하던 꿈과 운명적인 사랑을 이루기 위해 용기를 낸 ‘에리얼’은
+                사악한 바다 마녀 ‘울슐라’와의 위험한 거래를 통해 다리를 얻게 된다.
+                드디어 바다를 벗어나 그토록 원하던 인간 세상으로 가게 되지만,
+                그 선택으로 ‘에리얼’과 아틀란티카 왕국 모두 위험에 처하게 되는데… </p>
+            <p>평점 : 2.6</p>
+            <script type="text/javascript">
+                function func3() {
+                    alert('영화id:4');
+                }
+                </script>
+        </div>
+        <div class="movie-card">
+            <img class="p" src="https://img.cgv.co.kr/Movie/Thumbnail/Poster/000086/86996/86996_150.jpg" onclick="func4()">
+            <h3 class="movie-title">분노의 질주: 라이드 오어 다이</h3>
+            <p>돔(빈 디젤)과 그의 패밀리 앞에 나타난 운명의 적 단테(제이슨 모모아).
+                과거의 그림자는 돔의 모든 것을 파괴하기 위해 달려온다.
+                단테에 의해 산산히 흩어진 패밀리들은 모두 목숨을 걸고 맞서야 하는 함정에 빠지고 마는데...</p>
+            <p>평점 : 7.9</p>
+            <script type="text/javascript">
+                function func4() {
+                    alert('영화id:5');
+                }
+                </script>
+        </div>
+        <div class="movie-card">
+            <img class="p" src="https://img.cgv.co.kr/Movie/Thumbnail/Poster/000087/87035/87035_150.jpg" onclick="func5()">
+            <h3 class="movie-title">남은 인생 10년</h3>
+            <p>스무 살이 되던 해, 수 만명 중 1명이 걸리는
+                난치병으로 10년의 삶을 선고받은 ‘마츠리’는
+                삶의 의지를 잃은 ‘카즈토’를 만나 사랑에 빠진다.
+                처음 만난 봄, 즐거운 여름, 아름답던 가을, 깊어진 겨울까지
+                하루하루 애틋하게 사랑한 두 사람
+                하지만 쌓이는 추억만큼 줄어드는 시간 앞에
+                결국 ‘마츠리’는 ‘카즈토’를 떠나기로 결심하는데…</p>
+            <p>평점 : 8.1</p>
+            <script type="text/javascript">
+                function func5() {
+                    alert('영화id:6');
+                }
+                </script>
+        </div>
+        <div class="movie-card">
+            <img class="p" src="https://img.cgv.co.kr/Movie/Thumbnail/Poster/000087/87034/87034_150.jpg" onclick="func6()">
+            <h3 class="movie-title">엘리멘탈</h3>
+            <p>불, 물, 공기, 흙 4개의 원소들이 살고 있는 ‘엘리멘트 시티’
+                재치 있고 불처럼 열정 넘치는 ‘앰버'는 어느 날 우연히
+                유쾌하고 감성적이며 물 흐르듯 사는 '웨이드'를 만나 특별한 우정을 쌓으며,
+                지금껏 믿어온 모든 것들이 흔들리는 새로운 경험을 하게 되는데...</p>
+            <p>평점 : 8.4</p>
+            <script type="text/javascript">
+                function func6() {
+                    alert('영화id:7');
+                }
+                </script>
+        </div>
+        <div class="movie-card">
+            <img class="p" src="https://img.cgv.co.kr/Movie/Thumbnail/Poster/000086/86815/86815_150.jpg" onclick="func7()">
+            <h3 class="movie-title">스즈메의 문단속</h3>
+            <p>“이 근처에 폐허 없니? 문을 찾고 있어”
+                규슈의 한적한 마을에 살고 있는 소녀 ‘스즈메’는
+                문을 찾아 여행 중인 청년 ‘소타’를 만난다.
+            </p>
+            <p>평점 : 7.3</p>
+            <script type="text/javascript">
+                function func7() {
+                    alert('영화id:8');
+                }
+                </script>
+        </div>
+        <div class="movie-card">
+            <img class="p" src="https://img.cgv.co.kr/Movie/Thumbnail/Poster/000087/87042/87042_150.jpg" onclick="func8()">
+            <h3 class="movie-title">라이드 온</h3>
+            <p>한때 잘 나갔던 전설의 스턴트맨 ‘루오’(성룡).
+                유일한 파트너마 ‘레드 헤어’가 경매에 부쳐질 위기에 처하자
+                어쩔 수 없이 소원했던 딸 ‘바오’(류호존)에게 연락해 도움을 청한다.
+                ‘바오’는 자신의 변호사 남자친구 ‘미키’(곽기린)와 이를 해결하고자 하고,
+                조금씩 ‘루오’에게도 마음을 열어간다. </p>
+            <p>평점 : 7.7</p>
+            <script type="text/javascript">
+                function func8() {
+                    alert('영화id:9');
+                }
+                </script>
+        </div>
+        <div class="movie-card">
+            <img class="p" src="https://img.cgv.co.kr/Movie/Thumbnail/Poster/000086/86341/86341_150.jpg" onclick="func9()">
+            <h3 class="movie-title">슈퍼 마리오 브라더스</h3>
+            <p>뉴욕의 평범한 배관공 형제 '마리오'와 ‘루이지’는
+                배수관 고장으로 위기에 빠진 도시를 구하려다
+                미스터리한 초록색 파이프 안으로 빨려 들어가게 된다.
+
+                파이프를 통해 새로운 세상으로 차원 이동하게 된 형제.
+                형 '마리오'는 뛰어난 리더십을 지닌 '피치'가 통치하는 버섯왕국에 도착하지만
+                동생 '루이지'는 빌런 '쿠파'가 있는 다크랜드로 떨어지며 납치를 당하고
+                ‘마리오’는 동생을 구하기 위해 ‘피치’와 ‘키노피오’의 도움을 받아 '쿠파'에 맞서기로 결심한다. </p>
+            <p>평점 : 8.1</p>
+                 <script type="text/javascript">
+                function func9() {
+                    alert('영화id:10');
+                }
+                </script>
+        </div>
+        <div class="movie-card">
+            <img class="p" src="https://t1.daumcdn.net/movie/353b6aea0624a60cfeb7a7d402e5e2409a22d28d" onclick="func10()">
+            <h3 class="movie-title">아기공룡 둘리: 얼음별 대모험 리마스터링 </h3>
+            <p>아기공룡 둘리는 1억 년 전 거대한 빙산 조각에 갇혀 엄마와 헤어지게 되고 그 안에서 깊은 잠에 빠지게 된다. 어느 날 한강으로 빙산 조각이 흘러 들어오게 되고 조금씩 얼음이 깊은 잠에서
+                깨어난 둘리는 우연히 쌍문동에 사는 소시민 고길동의 집에 머물게 되는데, 호기심 많고 말썽꾸러기인 둘리로 인해 고길동의 집은 그날부터 하루도 맘 편할 날이 없다.
+
+                거기에 ‘공포의 공갈 젖꼭지’ 희동이, 외계인 도우너, 귀부인 타조 또치, 가수지망생 마이콜이 가세하고 이들은 타임 코스모스를 타고 빨리 어른이 되기 위해 미래로 여행을 떠난다. 그러나
+                타임 코스모스의 작동실수로 이들은 우주의 미로 속, 얼음별로 향하게 되고 그곳에서 둘리는 꿈에 그리던 엄마를 만나게 된다. 하지만 얼음별은 우주의 악당 바요킹에 의해 지배당하고 있었고
+                둘리 일행은 바요킹의 추격에 쫓기기 시작한다.</p>
+            <p>평점 : 9.1</p>
+            <script type="text/javascript">
+                function func10() {
+                    alert('영화id:11');
+                }
+                </script>
+        </div>
+        <div class="movie-card">
+            <img class="p" src="https://img.cgv.co.kr/Movie/Thumbnail/Poster/000086/86989/86989_150.jpg" onclick="func11()">
+            <h3 class="movie-title">드림팰리스</h3>
+            <p>산업재해로 남편을 잃은 ‘혜정’과 ‘수인’은
+                진상규명을 위해 함께 싸운 사이다.
+                ‘혜정’은 합의금을 받고 싸움을 멈췄지만,
+                ‘수인’은 다른 유가족들과 아직도 농성 중이다.
+
+                남편 목숨 값으로 분양받은 아파트
+                ‘드림팰리스’에서 새 삶을 시작한 ‘혜정’은
+                ‘수인’에게 새 집을 꿈꾸라고 부추긴다.
+                처음엔 단칼에 거절하던 ‘수인’도
+                어느새 ‘드림팰리스’를 꿈꾸게 되는데… </p>
+            <p>평점 : 7.1</p>
+            <script type="text/javascript">
+                function func11() {
+                    alert('영화id:12');
+                }
+                </script>
+        </div>
+        <div class="movie-card">
+            <img class="p" src="https://img.cgv.co.kr/Movie/Thumbnail/Poster/000086/86995/86995_150.jpg" onclick="func12()">
+            <h3 class="movie-title">극장판 짱구는 못말려: 동물소환 닌자 배꼽수비대 </h3>
+            <p>어느 날 ‘짱구‘와 동갑내기인 5살 ‘진구’를 데리고, 짱구 가족을 찾아온 수상한 여성.
+                서로의 아이가 바뀌었다는 충격적인 소식을 전한다.
+
+                하루아침에 닌자 가문의 후계자 ‘진구’로 불리게 된 짱구는
+                ‘부리부리 엉덩이 분신술’로 닌자 유치원을 초토화시킨다.
+
+                한편, 떡잎마을에 남겨진 진구와 짱구 가족은 짱구를 찾으러 닌자 마을로 향하고,
+                세상의 중심인 ‘지구의 배꼽’이 흔들리기 시작하며, 지구가 붕괴될 위기에 처하는데…</p>
+            <p>평점 : 8.9</p>
+            <script type="text/javascript">
+                function func12() {
+                    alert('영화id:13');
+                }
+                </script>
+        </div>
+        <div class="movie-card">
+            <img class="p" src="https://img.cgv.co.kr/Movie/Thumbnail/Poster/000087/87055/87055_150.jpg" onclick="func13()">
+            <h3 class="movie-title">트랜스포머: 비스트의 서막</h3>
+            <p>전 우주의 행성을 집어삼키는 절대자, ‘유니크론’의 부하
+                ‘스커지’는 ‘테러콘’들을 이끌고 지구에 당도한다.
+                그에 맞서기 위해 지구에 정체를 숨기고 있던 트랜스포머
+                ‘오토봇’ 군단이 모습을 드러내고
+                또 다른 트랜스포머 진영인 ‘맥시멀’과 힘을 합친다.
+
+                옵티머스 프라임이 이끄는 ‘오토봇’과
+                옵티머스 프라이멀을 중심으로 한 ‘맥시멀’.
+                모두의 운명을 건 그들의 압도적 전투가 시작된다!</p>
+            <p>평점 : 8.3</p>
+            <script type="text/javascript">
+                function func13() {
+                    alert('영화id:14');
+                }
+                </script>
+        </div>
+        <div class="movie-card">
+            <img class="p" src="https://img.cgv.co.kr/Movie/Thumbnail/Poster/000086/86959/86959_150.jpg" onclick="func14()">
+            <h3 class="movie-title">슬픔의 삼각형</h3> 
+            <p>호화 크루즈에 #협찬 으로 승선한 인플루언서 모델 커플.
+                각양각색의 부자들과 휴가를 즐기던 사이,
+                뜻밖의 사건으로 배가 전복되고 8명만이 간신히 무인도에 도착한다.
+                할 줄 아는 거라곤 구조 대기뿐인 사람들… 이때 존재감을 드러내는 건,</p>
+            <p>평점 : 7.3</p>
+            <script type="text/javascript">
+                function func14() {
+                    alert('영화id:15');
+                }
+                </script>
+        </div>
+        <div class="movie-card">
+            <img class="p" src="https://img.cgv.co.kr/Movie/Thumbnail/Poster/000086/86891/86891_150.jpg" onclick="func15()">
+            <h3 class="movie-title">말없는 소녀</h3>
+            <p>아일랜드의 작은 마을 가난한 집의 어린 소녀 코오트는 여름 동안 먼 친척 부부에게 맡겨진다. 낯선 환경도 잠시... 태어나서 처음으로 마주하는 다정함에 마음의 문을 열기 시작하고, 어느새
+                이들 사이엔 떼어놓기 힘든 특별한 우정이 싹튼다.</p>
+            <p>평점 : 9.6</p>
+            <script type="text/javascript">
+                function func15() {
+                    alert('영화id:16');
+                }
+                </script>
+        </div>
+        <div class="movie-card">
+            <img class="p" src="https://img.cgv.co.kr/Movie/Thumbnail/Poster/000087/87047/87047_150.jpg" onclick="func16()">
+            <h3 class="movie-title">그 여름</h3>
+            <p>"서로의 몸은 차라리 꽃잎과 물결에 가까웠다"
+                갈색 눈동자를 가진 평범한 학생 '이경'
+                여름의 햇살을 닮은 고교 축구선수 '수이'
+
+                열여덟 살의 여름, 예기치 못한 사랑에 빠진
+                '이경'과 '수이'는 함께하는 미래를 그리며 스무살을 맞이한다.
+
+                대학에 진학한 '이경'과 달리 '수이'는 바로 사회에 뛰어들고,
+                낯선 행복과 사소한 오해 속에서 둘은 새로운 계절을 마주하게 된다.</p>
+            <p>평점 : 7.1</p>
+            <script type="text/javascript">
+                function func16() {
+                    alert('영화id:17');
+                }
+                </script>
+        </div>
+        <div class="movie-card">
+            <img class="p" src="https://t1.daumcdn.net/movie/241c2bc2a5ca1e8789926a6b524c5e50859e39a5" onclick="func17()">
+            <h3 class="movie-title">배우의 꿈</h3>
+            <p>이 영화는 물질적 이익과 순수한 예술에 대한 추구가 충돌하는 중국 영화계의 어두운 내막을 다뤘다. 영화계는 수많은 남녀 배우들이 꿈을 추구하는 곳이지만 명예와 금전, 원한으로 얼룩진
+                곳이기도 하다. 주인공 린메이웨는 연기를 사랑하는 실력파 배우다. 그녀는 연기자로서 성공을 꿈꾸고 있었지만 금전 거래를 통한 배우 내정으로, 오랫동안 기대했던 배역에서 배제되고, 엎친데
+                덮친 격으로 교통사고까지 당해 다리를 쓰지 못하게 된다. 이 같은 불행 때문에 그녀는 나락으로 떨어졌고, 배우의 꿈도 산산조각 나고 만다. 눈물과 원한 속에서 10년을 보낸 린메이웨는 한
+                대만 중의사가 신기한 책 한 권을 선물한 것을 계기로 인생의 전기를 맞게 된다. 한편 유명 감독이 된 남편 장둥하이는 자신의 새 작품에 딸을 여주인공으로 출연시키려고 계획한다. 그런데
+                아내를 고통 속에 빠뜨린 천쯔링 사장이 실력 있는 여배우를 데리고 오디션을 보러 오자 10년 전 아내가 당한 것처럼 ＇복수극＇을 벌이기 시작하는데...</p>
+            <p>평점 : 10</p>     <script type="text/javascript">
+                function func17() {
+                    alert('영화id:18');
+                }
+                </script>
+        </div>
+        <div class="movie-card">
+            <img class="p" src="https://t1.daumcdn.net/movie/db4c63878196d7f0c5bcad7b8d55b76e9f1661d8" onclick="func18()">
+            <h3 class="movie-title">너의 눈을 들여다보면</h3>
+            <p>선천적 청각장애로 양쪽 귀가 들리지 않는 프로 복서 케이코.
+                재개발이 진행되고 있는 도쿄 도심의 작은 복싱 체육관에서 훈련을 거듭하며 다음 시합을 준비한다.
+
+                끊이지 않는 고민과 말로 표현할 수 없는 생각들이 마음에 쌓여만 가고, 체육관 회장에게 당분간 쉬고 싶다는 편지를 썼지만 끝내 보낼 수 없다.
+
+                그러던 어느 날, 케이코는 체육관이 문을 닫는다는 소식을 듣는다.</p>
+            <p>평점 : 7.0</p>
+            <script type="text/javascript">
+                function func18() {
+                    alert('영화id:19');
+                }
+                </script>
+        </div>
+        <div class="movie-card">
+            <img class="p" src="https://t1.daumcdn.net/movie/eb514ac276500897a26a8e979b130571586021b5" onclick="func19()">
+            <h3 class="movie-title">드림</h3>
+            <p>선수 생활 사상 최악의 위기를 맞은 쏘울리스 축구 선수 홍대(박서준)
+                계획도, 의지도 없던 홈리스 풋볼 월드컵 감독으로 재능기부에 나서게 된다
+
+                각본 없는 각본(?)으로 열정리스 현실파 PD 소민(아이유)이 다큐 제작으로 합류하게 되면서
+                뜯어진 운동화와 슬리퍼, 늘어진 반팔 티셔츠를 필두로
+                운동이라고는 한 번도 해본 적 없는 특별한(!) 선수들이 국가대표로 선발된다
+
+                택견인지 축구인지 헷갈리는 실력과 발보다 말이 앞서는 홈리스 선수들의 환장할 팀워크,
+                다큐에 대사와 상황 그리고 진정성 없는 연출을 강요하는 소민에
+                기가 막히는 감독 홍대
+
+                하지만 포기할 틈도 없이, 월드컵 출전일은 코앞으로 다가오는데...!
+                이들의 도전은 성공할 수 있을까?</p>
+            <p>평점 : 7.7</p>     <script type="text/javascript">
+                function func19() {
+                    alert('영화id:20');
+                }
+                </script>
+        </div>
+    </section>
+</body>
+
+</html>
